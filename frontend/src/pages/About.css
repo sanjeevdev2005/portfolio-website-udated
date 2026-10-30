@@ -1,0 +1,205 @@
+
+/* =====================================
+   ABOUT PAGE
+===================================== */
+
+.about-page {
+  width: 100%;
+}
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.about-intro {
+  padding: 70px 0 65px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.about-intro .eyebrow {
+  color: #8a9d36;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-intro h1 {
+  margin: 18px 0;
+  color: #20211e;
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.about-intro > p:not(.eyebrow) {
+  max-width: 650px;
+  color: #64706a;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =====================================
+   RESUME BUTTON
+===================================== */
+
+.about-resume-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 22px;
+  background: #a3b84b;
+  color: #20211e;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.about-resume-button:hover {
+  background: #8a9d36;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   COMMON SECTION
+===================================== */
+
+.about-section {
+  padding: 45px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.about-section h2 {
+  margin: 0 0 25px;
+  color: #20211e;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+.about-section > p {
+  max-width: 650px;
+  color: #64706a;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =====================================
+   EDUCATION
+===================================== */
+
+.education-card {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.education-card h3 {
+  margin: 0 0 12px;
+  color: #20211e;
+  font-size: 19px;
+}
+
+.education-card p {
+  margin: 0 0 12px;
+  color: #64706a;
+  line-height: 1.7;
+}
+
+.education-card span {
+  color: #8a9d36;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* =====================================
+   SKILLS
+===================================== */
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skills-list > div {
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.skills-list > div:hover {
+  transform: translateY(-3px);
+}
+
+.skills-list h3 {
+  margin: 0 0 12px;
+  color: #20211e;
+  font-size: 17px;
+}
+
+.skills-list p {
+  margin: 0;
+  color: #64706a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.about-section:last-child {
+  border-bottom: none;
+  padding-bottom: 65px;
+}
+
+.about-section > a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #59652d;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about-section > a:hover {
+  color: #20211e;
+  text-decoration: underline;
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 700px) {
+  .about-intro {
+    padding: 45px 0;
+  }
+
+  .about-intro h1 {
+    font-size: clamp(36px, 10vw, 50px);
+  }
+
+  .about-intro > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .about-section {
+    padding: 35px 0;
+  }
+
+  .about-section h2 {
+    font-size: 25px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    padding: 20px;
+  }
+}

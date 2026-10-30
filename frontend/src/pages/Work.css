@@ -1,0 +1,253 @@
+
+/* =====================================
+   WORK PAGE
+===================================== */
+
+.work-page {
+  width: 100%;
+}
+
+/* =====================================
+   PAGE HEADER
+===================================== */
+
+.work-header {
+  padding: 65px 0 45px;
+}
+
+.work-header .eyebrow {
+  color: #8a9d36;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.work-header h1 {
+  margin: 18px 0;
+  color: #20211e;
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.work-header > p:last-child {
+  max-width: 600px;
+  color: #64706a;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =====================================
+   PROJECT SECTION
+===================================== */
+
+.work-projects {
+  padding-bottom: 70px;
+}
+
+/* =====================================
+   PROJECT GRID
+===================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* =====================================
+   PROJECT CARD
+===================================== */
+
+.project-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.09);
+}
+
+/* =====================================
+   MAIN PROJECT LINK
+===================================== */
+
+.project-main-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-main-link:focus-visible {
+  outline: 2px solid #8a9d36;
+  outline-offset: -3px;
+}
+
+/* =====================================
+   PROJECT IMAGE
+===================================== */
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  background: #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.02);
+}
+
+/* =====================================
+   PROJECT CONTENT
+===================================== */
+
+.project-content {
+  padding: 24px 24px 12px;
+}
+
+.project-content h3 {
+  margin: 0 0 12px;
+  color: #20211e;
+  font-size: 23px;
+  letter-spacing: -0.5px;
+}
+
+.project-description {
+  margin: 0;
+  color: #64706a;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =====================================
+   TECHNOLOGY TAGS
+===================================== */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tech-stack span {
+  padding: 7px 11px;
+  background: #f0f2e8;
+  color: #59652d;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =====================================
+   PROJECT LINKS
+===================================== */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 18px 24px 24px;
+  border-top: 1px solid #eeeeea;
+}
+
+.project-links a {
+  color: #59652d;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #20211e;
+  text-decoration: underline;
+}
+
+/* =====================================
+   LOADING AND ERROR MESSAGES
+===================================== */
+
+.status {
+  padding: 20px 0;
+  color: #64706a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 20px 20px 10px;
+  }
+
+  .project-links {
+    gap: 14px;
+    padding: 16px 20px 20px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 700px) {
+  .work-header {
+    padding: 40px 0 30px;
+  }
+
+  .work-header h1 {
+    font-size: clamp(36px, 10vw, 50px);
+  }
+
+  .work-header > p:last-child {
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .project-content {
+    padding: 20px 20px 10px;
+  }
+
+  .project-content h3 {
+    font-size: 21px;
+  }
+
+  .project-links {
+    gap: 16px;
+    padding: 16px 20px 20px;
+  }
+}
