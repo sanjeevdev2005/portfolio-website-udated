@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 
-const API = "http://localhost:5000";
+import API from "../api";
 
 const initialForm = {
     title: "",

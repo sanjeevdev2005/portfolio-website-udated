@@ -13,12 +13,15 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Middleware
-app.use(
-  cors({
-    origin: "http://localhost:5173",
+const allowedOrigins = [
+    "http://localhost:5173",
+    `https://portfolio-website-udated.onrender.com/`
+];
+
+app.use(cors({
+    origin: allowedOrigins,
     credentials: true,
-  }),
-);
+}));
 
 app.use(express.json());
 app.use(cookieParser());

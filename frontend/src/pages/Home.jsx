@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import heroImage from "../assets/image.png";
+import API from "../api";
 
 function Home() {
   const [projects, setProjects] = useState([]);
@@ -9,7 +10,7 @@ function Home() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects")
+    fetch(`${API}/api/projects`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch projects");

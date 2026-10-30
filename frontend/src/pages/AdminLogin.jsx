@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import "./AdminLogin.css";
+import API from "../api";
 
 function AdminLogin() {
     const [email, setEmail] = useState("");
@@ -16,7 +17,7 @@ function AdminLogin() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/auth/login",
+                `${API}/api/auth/login`,
                 {
                     method: "POST",
                     headers: {

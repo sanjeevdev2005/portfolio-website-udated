@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import "./Work.css";
+import API from "../api";
 
 function Work() {
   const [projects, setProjects] = useState([]);
@@ -8,7 +9,7 @@ function Work() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects")
+    fetch(`${API}/api/projects`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
